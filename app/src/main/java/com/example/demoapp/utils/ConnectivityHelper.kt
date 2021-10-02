@@ -4,13 +4,9 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
-import dagger.hilt.android.qualifiers.ApplicationContext
-import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
-class ConnectivityHelper @Inject constructor(@ApplicationContext private val context: Context) {
-
+class ConnectivityHelper(context: Context) {
+	private var context: Context = context
 	fun isNetworkConnected(): Boolean {
 		var result = false
 		val connectivityManager =

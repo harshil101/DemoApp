@@ -18,5 +18,9 @@
 		android:id="@+id/detailFragment"
 		android:name="com.example.demoapp.ui.detail.DetailFragment"
 		android:label="detail_fragment"
-		tools:layout="@layout/detail_fragment" />
+		tools:layout="@layout/detail_fragment" >
+		<argument
+			android:name="id"
+			app:argType="string" />
+	</fragment>
 </navigation>
