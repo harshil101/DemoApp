@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:padding="@dimen/demo_dimen_8dp"
+	android:background="@color/white"
+	android:id="@+id/bottomSheet"
+	app:behavior_peekHeight="100dp"
+	app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="@dimen/demo_text_14sp"
+		android:textColor="@color/black"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintStart_toStartOf="parent"/>
+
+
+	<ImageView
+		android:id="@+id/closeSheet"
+		android:layout_width="20dp"
+		android:layout_height="20dp"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		android:src="@drawable/ic_baseline_close_24"/>
+
+	<View
+		android:id="@+id/lineSeparator"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="@color/black"
+		android:layout_marginTop="@dimen/demo_dimen_8dp"
+		app:layout_constraintTop_toBottomOf="@+id/closeSheet"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"/>
+
+	<FrameLayout
+		android:id="@+id/bottomSheetFragmentHolder"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		android:layout_marginTop="@dimen/demo_dimen_8dp"
+		app:layout_constraintTop_toBottomOf="@+id/lineSeparator"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

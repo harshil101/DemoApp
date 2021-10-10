@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DemoApp</string>
+    <string name="event_graph">Event graph</string>
 </resources>
