@@ -29,7 +29,7 @@ class VehicleFragment : BottomSheetBaseFragment(), ItemClickListener {
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
 		viewModel = ViewModelProvider(this).get(VehicleViewModel::class.java)
-		setTitle("Select Vehicle Type")
+		setTitle(getString(R.string.vehicle_type))
 		setupUI()
 		setUpObserver()
 	}

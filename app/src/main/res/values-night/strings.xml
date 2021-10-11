@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="event_graph">Event graph</string>
+    <string name="analytics_type">Select analytics type</string>
+	<string name="vehicle_type">Select Vehicle Type</string>
 </resources>

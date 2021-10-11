@@ -3,21 +3,27 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:orientation="vertical"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	tools:context=".component.analytics.AnalyticsFragment">
 
 	<com.google.android.material.chip.ChipGroup
+		android:id="@+id/chipsPrograms"
 		android:layout_width="match_parent"
-		android:id="@+id/chipGroup"
-		android:layout_height="wrap_content">
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="@dimen/demo_dimen_8dp"
+		android:paddingStart="@dimen/demo_dimen_8dp"
+		android:paddingEnd="@dimen/demo_dimen_8dp"
+		app:chipSpacing="8dp"
+		app:singleSelection="false"/>
 
-	<com.google.android.material.chip.Chip
+	<Button
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		app:chipIcon="@drawable/ic_baseline_close_24"
-		app:chipBackgroundColor="@color/black"
-		android:text="Harrasment"/>
-
-	</com.google.android.material.chip.ChipGroup>
+		android:id="@+id/btn_filter"
+		android:text="Apply filter"
+		android:layout_gravity="end"
+		android:textAllCaps="false"
+		android:layout_marginTop="@dimen/demo_dimen_80dp"/>
 
 </LinearLayout>

@@ -9,6 +9,7 @@ import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.example.demoapp.R
+import com.example.demoapp.component.analytics.AnalyticsFragment
 import com.example.demoapp.component.barchart.BarChartActivity
 import com.example.demoapp.component.spinner.CustomSpinnerModel
 import com.example.demoapp.component.spinner.SpinnerAdapter
@@ -32,6 +33,10 @@ class CommonComponentActivity : AppCompatActivity(), CloseBottomSheet {
 			openBottomSheet(VehicleFragment())
 		}
 
+		binding.btnBottomsheet2.setOnClickListener {
+			openBottomSheet(AnalyticsFragment())
+		}
+
 		binding.btnOverflow1.setOnClickListener {
 			val modelList: ArrayList<CustomSpinnerModel> = arrayListOf()
 			modelList.add(CustomSpinnerModel("Create New Group"))
@@ -44,6 +49,8 @@ class CommonComponentActivity : AppCompatActivity(), CloseBottomSheet {
 
 	private fun openBottomSheet(fragment: BottomSheetBaseFragment) {
 		binding.bsCoordinator.visibility = View.VISIBLE
+		binding.sheetView.closeSheet.visibility = View.GONE
+		binding.sheetView.lineSeparator.visibility = View.GONE
 		val sheetBehavior = BottomSheetBehavior.from(binding.sheetView.bottomSheet)
 		sheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
 		sheetBehavior.setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback(){
