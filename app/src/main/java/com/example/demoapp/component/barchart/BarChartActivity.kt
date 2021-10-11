@@ -63,6 +63,7 @@ class BarChartActivity : AppCompatActivity() {
 		}
 		val barDataSet = BarDataSet(entries, title)
 		val data = BarData(barDataSet)
+		data.isHighlightEnabled = false
 		val description = Description()
 		description.setEnabled(false)
 
@@ -81,6 +82,7 @@ class BarChartActivity : AppCompatActivity() {
 
 		binding.barchartView.apply {
 			legend.isEnabled = false
+			setScaleEnabled(false)
 			animateY(1000)
 			setDescription(description)
 			setData(data)
